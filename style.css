@@ -1,111 +1,118 @@
-/* Общие стили */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-  margin: 0;
-  padding: 20px;
-}
-
-/* Заголовок */
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-}
-
-/* Контейнер */
-#todo-container {
-  max-width: 500px;
-  margin: 0 auto;
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Поле ввода и кнопка Add */
-#todo-container input[type="text"] {
-  width: 68%;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-#todo-container input[type="text"]:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-#add-button {
-  padding: 10px 16px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-#add-button:hover {
-  background-color: #0056b3;
-}
-
-/* Список задач */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 25px;
-}
-
-li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fafafa;
-  padding: 12px 16px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  transition: background-color 0.3s;
-}
-
-li:hover {
-  background-color: #f5f5f5;
-}
-
-li.completed span {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Кнопки внутри задачи */
-li button {
-  padding: 6px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 5px;
-  transition: background-color 0.3s;
-}
-
-.complete-btn {
-  background-color: #28a745;
-  color: white;
-}
-
-.complete-btn:hover {
-  background-color: #218838;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: white;
-}
-
-.delete-btn:hover {
-  background-color: #c82333;
-}
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  #todo-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  header p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .input-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .input-section input[type="text"] {
+    width: 68%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .input-section button {
+    padding: 10px 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .input-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 25px;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  li.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  li button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .complete-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .complete-btn:hover {
+    background-color: #218838;
+  }
+  
+  .edit-btn {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #e0a800;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
