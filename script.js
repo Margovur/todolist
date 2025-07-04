@@ -1,33 +1,46 @@
-document.getElementById('add-button').addEventListener('click', addTask);
+
+const addButton = document.getElementById('add-button');
+const taskInput = document.getElementById('new-task');
+const taskList = document.getElementById('task-list');
+
+
+addButton.addEventListener('click', addTask);
+
 
 function addTask() {
-  const taskInput = document.getElementById('new-task');
   const taskText = taskInput.value.trim();
-  if (taskText === '') return;
+  
+  if (taskText === '') return; 
+
 
   const li = document.createElement('li');
+
 
   const span = document.createElement('span');
   span.textContent = taskText;
 
+
   const completeBtn = document.createElement('button');
   completeBtn.textContent = '✓';
   completeBtn.className = 'complete-btn';
-  completeBtn.onclick = () => {
+  completeBtn.addEventListener('click', () => {
     li.classList.toggle('completed');
-  };
+  });
+
 
   const deleteBtn = document.createElement('button');
   deleteBtn.textContent = '✗';
   deleteBtn.className = 'delete-btn';
-  deleteBtn.onclick = () => {
+  deleteBtn.addEventListener('click', () => {
     li.remove();
-  };
+  });
+
 
   li.appendChild(span);
   li.appendChild(completeBtn);
   li.appendChild(deleteBtn);
 
-  document.getElementById('task-list').appendChild(li);
+  taskList.appendChild(li);
+
   taskInput.value = '';
 }
